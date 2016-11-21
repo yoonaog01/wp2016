@@ -22,9 +22,9 @@ function create() {
   }
 
     //  update isn't called until 'create' has completed. If you need to process stuff before that point (i.e. while the preload is still happening)
-    //  then create a function called loadUpdate() and use that function
+    //  then create a function called loadUpdate() and use that
     
-    update() {
+    function update() {
                                     
     if (sprite.x >= 300){
        sprite.scale.x += 0.01;
