@@ -8,13 +8,13 @@ function preload() {
     //  There are 18 frames in the PNG - you can leave this value blank if the frames fill up the entire PNG, but in this case there are some
     //  blank frames at the end, so we tell the loader how many to load
                 
-    game.load.spritesheet('ms', 'sample.png', 92, 95, 11);
+    game.load.spritesheet('chr', 'sample.png', 92, 95, 11);
 
   }
 
 function create() {
 
-    sprite = game.add.sprite(40, 100, 'ms');
+    sprite = game.add.sprite(40, 100, 'chr');
     sprite.animations.add('walk');
     sprite.animations.play('walk', 50, true);
     game.add.tween(sprite).to({ x: game.width }, 10000, Phaser.Easing.Linear.None, true);
@@ -26,7 +26,7 @@ function create() {
     
     function update() {
                                     
-    if (sprite.x >= 300){
+if (sprite.x >= 300){
        sprite.scale.x += 0.01;
        sprite.scale.y += 0.01;
      }
