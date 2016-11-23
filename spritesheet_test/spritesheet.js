@@ -15,7 +15,7 @@ function preload() {
 function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
-    sprite.animations.add('walk',[ 2, 3, 4, 5],600);
+    sprite.animations.add('walk',[ 2, 3, 4, 5]);
     sprite.animations.play('walk');
 //    game.add.tween(sprite).to({ x: game.width }, 10000, Phaser.Easing.Linear.None, true);
 
