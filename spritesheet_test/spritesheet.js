@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create });
 
 var sprite;
 
@@ -15,7 +15,7 @@ function preload() {
 function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
-    sprite.animations.add('walk');
+    sprite.animations.add('walk',[2,3,4,5]);
     sprite.animations.play('walk', 50, true);
     game.add.tween(sprite).to({ x: game.width }, 10000, Phaser.Easing.Linear.None, true);
 
@@ -24,12 +24,4 @@ function create() {
     //  update isn't called until 'create' has completed. If you need to process stuff before that point (i.e. while the preload is still happening)
     //  then create a function called loadUpdate() and use that
     
-//function update() {
-                                    
-//if (sprite.x >= 300){
-//       sprite.scale.x += 0.01;
-//       sprite.scale.y += 0.01;
-//     }
-
-//  }
 
