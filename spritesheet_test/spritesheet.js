@@ -21,12 +21,12 @@ function create() {
     sprite.body.gravity.y = 300;
     sprite.body.collideWorldBounds = true;*/
 
-    sprite.animations.add('stand',[0],10,true);
-    sprite.animations.add('walk',[1, 2, 3, 4],10,true);
-    sprite.animations.add('jump',[5],10,true);
-    sprite.animations.add('climb',[6, 7],10.true);
-    sprite.animations.add('attack',[8, 9, 10],10,true);
-    sprite.animations.play('walk');
+    sprite.animations.add('stand',[0]);
+    sprite.animations.add('walk',[1, 2, 3, 4]);
+    sprite.animations.add('jump',[5]);
+    sprite.animations.add('climb',[6, 7]);
+    sprite.animations.add('attack',[8, 9, 10]);
+    sprite.animations.play('walk',10,true);
 }
 
 function update() {
