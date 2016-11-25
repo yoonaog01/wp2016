@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create});
 
 var sprite;
 
@@ -17,42 +17,21 @@ function create() {
     sprite = game.add.sprite(40, 100, 'chr');
     sprite.animations.add('stand',[0]);
     sprite.animations.play('stand',2,true);
-
+    
     sprite = game.add.sprite(140, 100, 'chr');
     sprite.animations.add('walk',[1, 2, 3, 4]);
     sprite.animations.play('walk',2,true);
-
-  }
-
-function m_walk() {
-
-    sprite = game.add.sprite(140, 100, 'chr');
-        sprite.animations.add('walk',[1, 2, 3, 4]);
-            sprite.animations.play('walk',2,true);
-
-              }
-
-function m_jump() {
-
+    
     sprite = game.add.sprite(240, 100, 'chr');
-        sprite.animations.add('jump',[5]);
-            sprite.animations.play('jump',2,true);
-
-              }
-
-function m_climb() {
+    sprite.animations.add('jump',[5]);
+    sprite.animations.play('jump',2,true);
 
     sprite = game.add.sprite(340, 100, 'chr');
-        sprite.animations.add('climb',[6, 7]);
-            sprite.animations.play('climb',2,true);
-
-              }
-
-function m_attack() {
+    sprite.animations.add('climb',[6, 7]);
+    sprite.animations.play('climb',2,true);
 
     sprite = game.add.sprite(440, 100, 'chr');
-        sprite.animations.add('attack',[8, 9, 10]);
-            sprite.animations.play('attack',2,true);
-
-              }
+    sprite.animations.add('attack',[8, 9, 10]);
+    sprite.animations.play('attack',2,true);
+ }
 
