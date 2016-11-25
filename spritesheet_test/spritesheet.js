@@ -8,7 +8,7 @@ function preload() {
     //  There are 18 frames in the PNG - you can leave this value blank if the frames fill up the entire PNG, but in this case there are some
     //  blank frames at the end, so we tell the loader how many to load
                 
-    game.load.spritesheet('chr', 'sample.png', 93, 95, 11);
+    game.load.spritesheet('chr', 'sample.png', 91, 95, 11);
 
   }
 
