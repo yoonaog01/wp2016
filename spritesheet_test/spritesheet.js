@@ -14,41 +14,42 @@ function preload() {
 
 function create() {
 
+    game.physics.arcade.enable(sprite);
     sprite = game.add.sprite(40, 100, 'chr');
-    sprite.animations.add('stand',[0]);
-    sprite.animations.add('walk',[1, 2, 3, 4]);
-    sprite.animations.add('jump',[5]);
-    sprite.animations.add('climb',[6, 7]);
-    sprite.animations.add('attack',[8, 9, 10]);
- }
+    sprite.animations.add('stand',[0],10,true);
+    sprite.animations.add('walk',[1, 2, 3, 4],10,true);
+    sprite.animations.add('jump',[5],10,true);
+    sprite.animations.add('climb',[6, 7],10.true);
+    sprite.animations.add('attack',[8, 9, 10],10,true);
+}
 
 function update() {
     if (cusors.left.isDown) {
         sprite.body.velocity.x = -60;
-        sprite.animations.play('walk',2,true);
+        sprite.animations.play('walk');
     }
 
     else if (cusors.right.isDown) {
         sprite.body.velocity.x = 60;
-        sprite.animations.play('walk',2,true);
+        sprite.animations.play('walk');
     }
 
     else if (cusors.up.isDown) {
         sprite.body.velocity.y = 20;
-        sprite.animations.play('climb',2,true);
+        sprite.animations.play('climb');
     }
       
     else if (cusors.down.isDown) {
         sprite.body.velocity.y = -20;
-        sprite.animations.play('climb',2,true);
+        sprite.animations.play('climb');
     }
 
-    else if (cusors.a.isDown) {
-        sprite.animations.play('attack',3,true);
-    }
+/*    else if (cusors.a.isDown) {
+        sprite.animations.play('attack');
+    }*/
 
     else {
-        sprite.animations.play('stand',2,true);
+        sprite.animations.play('stand');
     }
 
 }
