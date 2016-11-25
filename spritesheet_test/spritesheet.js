@@ -29,33 +29,32 @@ function create() {
 }
 
 function update() {
-        sprite.animations.play('walk',10,true);
-/*    if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
+    if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
         sprite.body.velocity.x = -60;
-        sprite.animations.play('walk');
+        sprite.animations.play('walk',5,true);
     }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
         sprite.body.velocity.x = 60;
-        sprite.animations.play('walk');
+        sprite.animations.play('walk',5,true);
     }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
         sprite.body.velocity.y = 20;
-        sprite.animations.play('climb');
+        sprite.animations.play('climb',5,true);
     }
       
     else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-        sprite.body.velocity.y = -20;*/
-//        sprite.animations.play('climb');
-//    }
+        sprite.body.velocity.y = -20;
+        sprite.animations.play('climb',5,true);
+    }
 
 /*    else if (cusors.a.isDown) {
         sprite.animations.play('attack');
     }*/
-/*
+
     else {
-        sprite.animations.play('stand');
-    }*/
+        sprite.animations.play('stand',5,true);
+    }
 
 }
