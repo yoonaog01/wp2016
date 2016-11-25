@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, stand: stand, walk: walk, jump: jump, climb: climb, attack: attack });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, m_stand: m_stand, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
 
 var sprite;
 
@@ -12,7 +12,7 @@ function preload() {
 
   }
 
-function stand() {
+function m_stand() {
 
     sprite = game.add.sprite(40, 100, 'chr');
     sprite.animations.add('stand',[0]);
@@ -20,7 +20,7 @@ function stand() {
 
   }
 
-function walk() {
+function m_walk() {
 
     sprite = game.add.sprite(140, 100, 'chr');
         sprite.animations.add('walk',[1, 2, 3, 4]);
@@ -28,7 +28,7 @@ function walk() {
 
               }
 
-function jump() {
+function m_jump() {
 
     sprite = game.add.sprite(240, 100, 'chr');
         sprite.animations.add('jump',[5]);
@@ -36,7 +36,7 @@ function jump() {
 
               }
 
-function climb() {
+function m_climb() {
 
     sprite = game.add.sprite(340, 100, 'chr');
         sprite.animations.add('climb',[6, 7]);
@@ -44,7 +44,7 @@ function climb() {
 
               }
 
-function attack() {
+function m_attack() {
 
     sprite = game.add.sprite(440, 100, 'chr');
         sprite.animations.add('attack',[8, 9, 10]);
