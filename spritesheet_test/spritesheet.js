@@ -28,23 +28,27 @@ function update() {
         sprite.animations.play('walk',2,true);
     }
 
-    if (cusors.right.isDown) {
+    else if (cusors.right.isDown) {
         sprite.body.velocity.x = 60;
         sprite.animations.play('walk',2,true);
     }
 
-    if (cusors.up.isDown) {
+    else if (cusors.up.isDown) {
         sprite.body.velocity.y = 20;
         sprite.animations.play('climb',2,true);
     }
       
-    if (cusors.down.isDown) {
+    else if (cusors.down.isDown) {
         sprite.body.velocity.y = -20;
         sprite.animations.play('climb',2,true);
     }
 
-    if (cusors.a.isDown) {
+    else if (cusors.a.isDown) {
         sprite.animations.play('attack',3,true);
+    }
+
+    else {
+        sprite.animations.play('stand',2,true);
     }
 
 }
