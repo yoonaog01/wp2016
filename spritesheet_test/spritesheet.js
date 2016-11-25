@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update});
 
 var sprite;
 
@@ -16,22 +16,35 @@ function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
     sprite.animations.add('stand',[0]);
-    sprite.animations.play('stand',2,true);
-    
-    sprite = game.add.sprite(140, 100, 'chr');
     sprite.animations.add('walk',[1, 2, 3, 4]);
-    sprite.animations.play('walk',2,true);
-    
-    sprite = game.add.sprite(240, 100, 'chr');
     sprite.animations.add('jump',[5]);
-    sprite.animations.play('jump',2,true);
-
-    sprite = game.add.sprite(340, 100, 'chr');
     sprite.animations.add('climb',[6, 7]);
-    sprite.animations.play('climb',2,true);
-
-    sprite = game.add.sprite(440, 100, 'chr');
     sprite.animations.add('attack',[8, 9, 10]);
-    sprite.animations.play('attack',2,true);
  }
 
+function update() {
+    if (cusors.left.isDown) {
+        sprite.body.velocity.x = -60;
+        sprite.animations.play('walk',2,true);
+    }
+
+    if (cusors.right.isDown) {
+        sprite.body.velocity.x = 60;
+        sprite.animations.play('walk',2,true);
+    }
+
+    if (cusors.up.isDown) {
+        sprite.body.velocity.y = 20;
+        sprite.animations.play('climb',2,true);
+    }
+      
+    if (cusors.down.isDown) {
+        sprite.body.velocity.y = -20;
+        sprite.animations.play('climb',2,true);
+    }
+
+    if (cusors.a.isDown) {
+        sprite.animations.play('attack',3,true);
+    }
+
+}
