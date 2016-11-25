@@ -14,8 +14,8 @@ function preload() {
 
 function create() {
 
-    game.physics.arcade.enable(sprite);
     sprite = game.add.sprite(40, 100, 'chr');
+    game.physics.arcade.enable(sprite);
     sprite.animations.add('stand',[0],10,true);
     sprite.animations.add('walk',[1, 2, 3, 4],10,true);
     sprite.animations.add('jump',[5],10,true);
