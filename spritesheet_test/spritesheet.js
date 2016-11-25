@@ -16,10 +16,10 @@ function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
 
-/*    game.physics.arcade.enable(sprite);
+    game.physics.arcade.enable(sprite);
     sprite.body.bounce.y = 0.2;
     sprite.body.gravity.y = 300;
-    sprite.body.collideWorldBounds = true;*/
+    sprite.body.collideWorldBounds = true;
 
     sprite.animations.add('stand',[0]);
     sprite.animations.add('walk',[1, 2, 3, 4]);
