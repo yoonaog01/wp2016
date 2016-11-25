@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create.stand, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create.stand: create.stand, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
 
 var sprite;
 
