@@ -18,6 +18,10 @@ function create() {
     sprite.animations.add('stand',[0]);
     sprite.animations.play('stand',2,true);
 
+    sprite = game.add.sprite(140, 100, 'chr');
+    sprite.animations.add('walk',[1, 2, 3, 4]);
+    sprite.animations.play('walk',2,true);
+
   }
 
 function m_walk() {
