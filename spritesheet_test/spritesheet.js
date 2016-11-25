@@ -30,28 +30,28 @@ function create() {
 
 function update() {
     if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
-        sprite.body.velocity.x = -60;
+        sprite.body.velocity.x = -120;
         sprite.animations.play('walk',5,true);
     }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
-        sprite.body.velocity.x = 60;
+        sprite.body.velocity.x = 120;
         sprite.animations.play('walk',5,true);
     }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-        sprite.body.velocity.y = 20;
+        sprite.body.velocity.y = -40;
         sprite.animations.play('climb',5,true);
     }
       
     else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-        sprite.body.velocity.y = -20;
+        sprite.body.velocity.y = 40;
         sprite.animations.play('climb',5,true);
     }
 
-/*    else if (cusors.a.isDown) {
-        sprite.animations.play('attack');
-    }*/
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.A)) {
+        sprite.animations.play('attack',5,true);
+    }
 
     else {
         sprite.body.velocity.x = 0;
