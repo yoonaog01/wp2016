@@ -24,22 +24,22 @@ function create() {
 }
 
 function update() {
-    if (cusors.left.isDown) {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
         sprite.body.velocity.x = -60;
         sprite.animations.play('walk');
     }
 
-    else if (cusors.right.isDown) {
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
         sprite.body.velocity.x = 60;
         sprite.animations.play('walk');
     }
 
-    else if (cusors.up.isDown) {
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
         sprite.body.velocity.y = 20;
         sprite.animations.play('climb');
     }
       
-    else if (cusors.down.isDown) {
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
         sprite.body.velocity.y = -20;
         sprite.animations.play('climb');
     }
