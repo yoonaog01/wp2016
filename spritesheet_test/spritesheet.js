@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create_stand: create_stand, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, m_walk: m_walk, m_jump: m_jump, m_climb: m_climb, m_attack: m_attack });
 
 var sprite;
 
@@ -12,7 +12,7 @@ function preload() {
 
   }
 
-function create_stand() {
+function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
     sprite.animations.add('stand',[0]);
