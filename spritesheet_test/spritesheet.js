@@ -26,10 +26,10 @@ function create() {
     sprite.animations.add('jump',[5]);
     sprite.animations.add('climb',[6, 7]);
     sprite.animations.add('attack',[8, 9, 10]);
-    sprite.animations.play('walk',10,true);
 }
 
 function update() {
+        sprite.animations.play('walk',10,true);
 /*    if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
         sprite.body.velocity.x = -60;
         sprite.animations.play('walk');
