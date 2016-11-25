@@ -40,12 +40,12 @@ function update() {
     }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-        sprite.body.velocity.y = -40;
+        sprite.body.velocity.y = -120;
         sprite.animations.play('climb',5,true);
     }
       
     else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-        sprite.body.velocity.y = 40;
+        sprite.body.velocity.y = 120;
         sprite.animations.play('climb',5,true);
     }
 
