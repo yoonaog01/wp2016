@@ -26,6 +26,7 @@ function create() {
     sprite.animations.add('jump',[5],10,true);
     sprite.animations.add('climb',[6, 7],10.true);
     sprite.animations.add('attack',[8, 9, 10],10,true);
+    sprite.animations.play('walk');
 }
 
 function update() {
@@ -46,7 +47,7 @@ function update() {
       
     else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
         sprite.body.velocity.y = -20;*/
-        sprite.animations.play('climb');
+//        sprite.animations.play('climb');
 //    }
 
 /*    else if (cusors.a.isDown) {
