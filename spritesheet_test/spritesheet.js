@@ -17,9 +17,9 @@ function create() {
     sprite = game.add.sprite(40, 100, 'chr');
 
     game.physics.arcade.enable(sprite);
-    sprite.body.bounce.y = 0.2;
-    sprite.body.gravity.y = 300;
-    sprite.body.collideWorldBounds = true;
+//    sprite.body.bounce.y = 0.2;
+//    sprite.body.gravity.y = 300;
+//    sprite.body.collideWorldBounds = true;
 
     sprite.animations.add('stand',[0]);
     sprite.animations.add('walk',[1, 2, 3, 4]);
@@ -54,6 +54,8 @@ function update() {
     }*/
 
     else {
+        sprite.body.velocity.x = 0;
+        sprite.body.velocity.y = 0;
         sprite.animations.play('stand',5,true);
     }
 
