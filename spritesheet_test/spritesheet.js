@@ -72,7 +72,7 @@ function update() {
         sprite.animations.play('attack',5,true);
     }
 
-    if (!LEFT && !RIGHT && !UP && !DOWN && !ATTACK){
+    if (!LEFT && !RIGHT && !UP && !DOWN && !ATTACK && !JUMP){
             sprite.animations.play('stand',5,true);
     }
 
