@@ -64,6 +64,16 @@ function update() {
         sprite.animations.play('attack',5,true);
     }
 
+    if (!game.input.keyboard.isDown(Phaser.Keyboard.UP) && !game.input.keyboard.isDown(Phaser.Keyboard.DOWN) && !game.input.keyboard.isDown(Phaser.Keyboard.X)){
+        sprite.body.velocity.y = 0;
+    }
+
+    if (!game.input.keyboard.isDown(Phaser.Keyboard.LEFT) && !game.input.keyboard.isDown(Phaser.Keyboard.RIGHT) && !game.input.keyboard.isDown(Phaser.Keyboard.UP) && !game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+        if( !game.input.keyboard.isDown(Phaser.Keyboard.CONTROL)){
+            sprite.animations.play('stand',5,true);
+        }
+    }
+
 
 
 }
