@@ -17,7 +17,7 @@ function create() {
     sprite = game.add.sprite(40, 100, 'chr');
 
     game.physics.arcade.enable(sprite);
-    sprite.body.bounce.y = 0.2;
+//    sprite.body.bounce.y = 0.2;
     sprite.body.gravity.y = 300;
     sprite.body.collideWorldBounds = true;
 
@@ -49,7 +49,7 @@ function update() {
         sprite.animations.play('climb',5,true);
     }
 
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.ALT) && sprite.body.touching.down) {
+    else if (game.input.keyboard.isDown(Phaser.Keyboard.SPACE_BAR) && sprite.body.touching.down) {
          sprite.body.velocity.y = -350;
          sprite.animations.play('jump',5,true);
     }
