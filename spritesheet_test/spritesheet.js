@@ -34,20 +34,20 @@ function update() {
         sprite.animations.play('walk',5,true);
     }
 
-    else {
+/*    else {
         sprite.body.velocity.x = 0;
         sprite.animations.play('stand',5,true);
-    }
+    }*/
 
     if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
         sprite.body.velocity.x = 120;
         sprite.animations.play('walk',5,true);
     }
 
-    else {
+ /*   else {
         sprite.body.velocity.x = 0;
         sprite.animations.play('stand',5,true);
-    }
+    }*/
 
     if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
         sprite.body.velocity.x = 0;
