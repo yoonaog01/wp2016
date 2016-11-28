@@ -64,7 +64,7 @@ function update() {
     }
 
     if (JUMP) {
-         sprite.body.velocity.y = -350;
+         sprite.body.velocity.y = -100;
          sprite.animations.play('jump',5,true);
     }
 
