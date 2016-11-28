@@ -49,7 +49,7 @@ function update() {
         sprite.animations.play('climb',5,true);
     }
 
-    else if (game.input.keyboard.justPressed(Phaser.Keyboard.SPACEBAR, 50)) {
+    else if (game.input.keyboard.justPressed((Phaser.Keyboard.SPACEBAR), 50)) {
          sprite.body.velocity.y = -350;
          sprite.animations.play('jump',5,true);
     }
