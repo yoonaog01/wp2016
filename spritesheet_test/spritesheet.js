@@ -55,7 +55,7 @@ function update() {
         sprite.animations.play('climb',5,true);
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.ALT)) {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.X)) {
          sprite.body.velocity.y = -350;
          sprite.animations.play('jump',5,true);
     }
