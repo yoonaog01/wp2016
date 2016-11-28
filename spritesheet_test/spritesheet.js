@@ -34,6 +34,11 @@ function update() {
         sprite.animations.play('walk',5,true);
     }
 
+    if (game.input.keyboard.justRealeased(Phaser.Keyboard.LEFT , 50)){
+        sprite.body.velocity.x = 0;
+        sprite.animations.play('stand',5,true);
+    }
+
 /*    else {
         sprite.body.velocity.x = 0;
         sprite.animations.play('stand',5,true);
