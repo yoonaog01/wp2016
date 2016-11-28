@@ -17,7 +17,7 @@ function create() {
     sprite = game.add.sprite(40, 100, 'chr');
 
     RIGHT = game.input.keyboard.isDown(Phaser.Keyboard.RIGHT);
-    LEFT = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
+    GoLeft = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
     UP = game.input.keyboard.isDown(Phaser.Keyboard.UP);
     DOWN = game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
     ATTACK = game.input.keyboard.isDown(Phaser.Keyboard.CONTROL);
@@ -36,7 +36,7 @@ function create() {
 }
 
 function update() {
-    if (LEFT){       
+    if (GoLeft){       
         sprite.body.velocity.x = -120;
         sprite.animations.play('walk',5,true);
     }
@@ -76,6 +76,7 @@ function update() {
             sprite.animations.play('stand',5,true);
         }
     }
+
 
 
 
