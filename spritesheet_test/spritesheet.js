@@ -16,12 +16,6 @@ function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
 
-    RIGHT = game.input.keyboard.isDown(Phaser.Keyboard.RIGHT);
-    UP = game.input.keyboard.isDown(Phaser.Keyboard.UP);
-    DOWN = game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
-    ATTACK = game.input.keyboard.isDown(Phaser.Keyboard.CONTROL);
-    JUMP = game.input.keyboard.isDown(Phaser.Keyboard.X);
-
     game.physics.arcade.enable(sprite);
 //    sprite.body.bounce.y = 0.2;
     sprite.body.gravity.y = 300;
@@ -36,47 +30,50 @@ function create() {
 
 function update() {
 
-    GoLeft = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
+    LEFT = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
+    RIGHT = game.input.keyboard.isDown(Phaser.Keyboard.RIGHT);
+    UP = game.input.keyboard.isDown(Phaser.Keyboard.UP);
+    DOWN = game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
+    ATTACK = game.input.keyboard.isDown(Phaser.Keyboard.CONTROL);
+    JUMP = game.input.keyboard.isDown(Phaser.Keyboard.X);
 
-    if (GoLeft){       
+    if (LEFT){       
         sprite.body.velocity.x = -120;
         sprite.animations.play('walk',5,true);
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+    if (RIGHT) {
         sprite.body.velocity.x = 120;
         sprite.animations.play('walk',5,true);
     }
 
-    if(!game.input.keyboard.isDown(Phaser.Keyboard.RIGHT) && !game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+    if(!LEFT && !RIGHT){
         sprite.body.velocity.x = 0;
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+    if (UP) {
         sprite.body.velocity.x = 0;
         sprite.body.velocity.y = -120;
         sprite.animations.play('climb',5,true);
     }
       
-    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+    if (DOWN) {
         sprite.body.velocity.x = 0;
         sprite.body.velocity.y = 120;
         sprite.animations.play('climb',5,true);
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.X)) {
+    if (JUMP) {
          sprite.body.velocity.y = -350;
          sprite.animations.play('jump',5,true);
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.CONTROL)) {
+    if (ATTACK) {
         sprite.animations.play('attack',5,true);
     }
 
-    if (!game.input.keyboard.isDown(Phaser.Keyboard.LEFT) && !game.input.keyboard.isDown(Phaser.Keyboard.RIGHT) && !game.input.keyboard.isDown(Phaser.Keyboard.UP) && !game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-        if( !game.input.keyboard.isDown(Phaser.Keyboard.CONTROL)){
+    if (!LEFT && !RIGHT && !UP && !DOWN && !ATTACK){
             sprite.animations.play('stand',5,true);
-        }
     }
 
 
