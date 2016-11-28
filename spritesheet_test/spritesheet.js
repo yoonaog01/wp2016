@@ -34,33 +34,40 @@ function update() {
         sprite.animations.play('walk',5,true);
     }
 
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+    else {
+        sprite.body.velocity.x = 0;
+        sprite.animations.play('stand',5,true);
+    }
+
+    if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
         sprite.body.velocity.x = 120;
         sprite.animations.play('walk',5,true);
-    }
-
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-        sprite.body.velocity.y = -120;
-        sprite.animations.play('climb',5,true);
-    }
-      
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-        sprite.body.velocity.y = 120;
-        sprite.animations.play('climb',5,true);
-    }
-
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-         sprite.body.velocity.y = -350;
-         sprite.animations.play('jump',5,true);
-    }
-
-    else if (game.input.keyboard.isDown(Phaser.Keyboard.CONTROL)) {
-        sprite.animations.play('attack',5,true);
     }
 
     else {
         sprite.body.velocity.x = 0;
         sprite.animations.play('stand',5,true);
+    }
+
+    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+        sprite.body.velocity.x = 0;
+        sprite.body.velocity.y = -120;
+        sprite.animations.play('climb',5,true);
+    }
+      
+    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+        sprite.body.velocity.x = 0;
+        sprite.body.velocity.y = 120;
+        sprite.animations.play('climb',5,true);
+    }
+
+    if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
+         sprite.body.velocity.y = -350;
+         sprite.animations.play('jump',5,true);
+    }
+
+    if (game.input.keyboard.isDown(Phaser.Keyboard.CONTROL)) {
+        sprite.animations.play('attack',5,true);
     }
 
 }
