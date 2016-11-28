@@ -16,6 +16,13 @@ function create() {
 
     sprite = game.add.sprite(40, 100, 'chr');
 
+    RIGHT = game.input.keyboard.isDown(Phaser.Keyboard.RIGHT);
+    LEFT = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
+    UP = game.input.keyboard.isDown(Phaser.Keyboard.UP);
+    DOWN = game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
+    ATTACK = game.input.keyboard.isDown(Phaser.Keyboard.CONTROL);
+    JUMP = game.input.keyboard.isDown(Phaser.Keyboard.X);
+
     game.physics.arcade.enable(sprite);
 //    sprite.body.bounce.y = 0.2;
     sprite.body.gravity.y = 300;
@@ -29,7 +36,7 @@ function create() {
 }
 
 function update() {
-    if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){       
+    if (LEFT){       
         sprite.body.velocity.x = -120;
         sprite.animations.play('walk',5,true);
     }
