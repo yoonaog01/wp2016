@@ -8,7 +8,7 @@ function preload() {
     //  There are 18 frames in the PNG - you can leave this value blank if the frames fill up the entire PNG, but in this case there are some
     //  blank frames at the end, so we tell the loader how many to load
                 
-    game.load.spritesheet('chr', 'img/sample.png', 93, 95, 11);
+    game.load.spritesheet('chr', 'img/monster_squirrel.png', 54, 49, 5);
 
   }
 
@@ -22,10 +22,10 @@ function create() {
     sprite.body.collideWorldBounds = true;
 
     sprite.animations.add('stand',[0]);
-    sprite.animations.add('walk',[1, 2, 3, 4]);
-    sprite.animations.add('jump',[5]);
-    sprite.animations.add('climb',[6, 7]);
-    sprite.animations.add('attack',[8, 9, 10]);
+    sprite.animations.add('walk',[1, 2]);
+    sprite.animations.add('jump',[3,4]);
+//    sprite.animations.add('climb',[6, 7]);
+//    sprite.animations.add('attack',[8, 9, 10]);
 }
 
 function update() {
@@ -51,7 +51,7 @@ function update() {
         sprite.body.velocity.x = 0;
     }
 
-    if (UP) {
+/*    if (UP) {
         sprite.body.velocity.x = 0;
         sprite.body.velocity.y = -120;
         sprite.animations.play('climb',5,true);
@@ -61,18 +61,18 @@ function update() {
         sprite.body.velocity.x = 0;
         sprite.body.velocity.y = 120;
         sprite.animations.play('climb',5,true);
-    }
+    }*/
 
     if (JUMP) {
-         sprite.body.velocity.y = -200;
+        // sprite.body.velocity.y = -200;
          sprite.animations.play('jump',5,true);
     }
 
-    if (ATTACK) {
+/*    if (ATTACK) {
         sprite.animations.play('attack',5,true);
-    }
+    }*/
 
-    if (!LEFT && !RIGHT && !UP && !DOWN && !ATTACK && !JUMP){
+    if (!LEFT && !RIGHT &&/* !UP && !DOWN && !ATTACK &&*/ !JUMP){
             sprite.animations.play('stand',5,true);
     }
 
